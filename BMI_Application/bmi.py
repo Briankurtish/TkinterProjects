@@ -27,4 +27,8 @@ button_1 = customtkinter.CTkButton(
     master=root, text="Calculate BMI", width=190, height=40, compound="top")
 button_1.pack(pady=20)
 
+button_2 = customtkinter.CTkButton(
+    master=root, text="Clear Screen", width=190, height=40, fg_color="#D35B58", hover_color="#C77C78")
+button_2.pack(pady=20)
+
 root.mainloop()
