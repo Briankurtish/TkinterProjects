@@ -17,5 +17,9 @@ h_entry = customtkinter.CTkEntry(master=root, placeholder_text="Height in Inches
                                  width=200, height=30, border_width=1, corner_radius=10)
 h_entry.pack(pady=20)
 
+w_entry = customtkinter.CTkEntry(master=root, placeholder_text="Width in Pounds",
+                                 width=200, height=30, border_width=1, corner_radius=10)
+w_entry.pack(pady=20)
+
 
 root.mainloop()
