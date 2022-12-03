@@ -31,4 +31,10 @@ button_2 = customtkinter.CTkButton(
     master=root, text="Clear Screen", width=190, height=40, fg_color="#D35B58", hover_color="#C77C78")
 button_2.pack(pady=20)
 
+# Add Result Label
+
+results = customtkinter.CTkLabel(
+    master=root, text="", font=("Helvetica", 28))
+results.pack(pady=50)
+
 root.mainloop()
