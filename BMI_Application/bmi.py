@@ -11,7 +11,14 @@ root = customtkinter.CTk()
 root.title('Cipher - BMI Calculator')
 root.geometry("500x600")
 
-# Define Entry Boxes
+
+def clear_screen():
+    h_entry.delete(0, END)
+    w_entry.delete(0, END)
+    results.config(text="")
+
+    # Define Entry Boxes
+
 
 h_entry = customtkinter.CTkEntry(master=root, placeholder_text="Height in Inches",
                                  width=200, height=30, border_width=1, corner_radius=10)
@@ -24,11 +31,12 @@ w_entry.pack(pady=20)
 
 # Buttons
 button_1 = customtkinter.CTkButton(
-    master=root, text="Calculate BMI", width=190, height=40, compound="top")
+    master=root, text="Calculate BMI", width=190, height=40, compound="top", command=get_Bmi)
 button_1.pack(pady=20)
 
 button_2 = customtkinter.CTkButton(
-    master=root, text="Clear Screen", width=190, height=40, fg_color="#D35B58", hover_color="#C77C78")
+    master=root, text="Clear Screen", width=190, height=40, fg_color="#D35B58",
+    hover_color="#C77C78", command=clear_screen)
 button_2.pack(pady=20)
 
 # Add Result Label
