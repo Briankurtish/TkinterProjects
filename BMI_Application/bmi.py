@@ -15,7 +15,19 @@ root.geometry("500x600")
 def clear_screen():
     h_entry.delete(0, END)
     w_entry.delete(0, END)
-    results.config(text="")
+    results.configure(text="")
+
+
+def get_Bmi():
+    # Calculate BMI
+    #(weight_pounds/height_inches^2) * 703
+
+    our_height = int(h_entry.get()) * int(h_entry.get())
+    our_weight = int(w_entry.get())
+    bmi = (our_weight/our_height)*703
+    bmi_rounded = round(bmi, 1)
+
+    results.configure(text=f"{str(bmi_rounded)}")
 
     # Define Entry Boxes
 
