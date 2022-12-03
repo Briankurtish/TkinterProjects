@@ -22,4 +22,9 @@ w_entry = customtkinter.CTkEntry(master=root, placeholder_text="Width in Pounds"
 w_entry.pack(pady=20)
 
 
+# Buttons
+button_1 = customtkinter.CTkButton(
+    master=root, text="Calculate BMI", width=190, height=40, compound="top")
+button_1.pack(pady=20)
+
 root.mainloop()
