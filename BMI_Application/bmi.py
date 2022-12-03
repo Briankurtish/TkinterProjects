@@ -29,6 +29,23 @@ def get_Bmi():
 
     results.configure(text=f"{str(bmi_rounded)}")
 
+    # Logic
+    if bmi_rounded < 18.5:
+        results.configure(
+            text=f"{str(bmi_rounded)}\nUnderweight", text_color="#54b1e1")
+    elif bmi_rounded >= 18.5 and bmi_rounded <= 24.9:
+        results.configure(
+            text=f"{str(bmi_rounded)}\nNormal", text_color="#b3b686")
+    elif bmi_rounded >= 25.0 and bmi_rounded <= 29.9:
+        results.configure(
+            text=f"{str(bmi_rounded)}\nOverweight", text_color="#fed429")
+    elif bmi_rounded >= 30 and bmi_rounded <= 34.9:
+        results.configure(
+            text=f"{str(bmi_rounded)}\nObese", text_color="#fbaf42")
+    elif bmi_rounded >= 35:
+        results.configure(
+            text=f"{str(bmi_rounded)}\nExtreme Obese", text_color="#f25356")
+
     # Define Entry Boxes
 
 
